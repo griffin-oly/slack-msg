@@ -1,0 +1,31 @@
+---
+# defaults file for slack-notification
+#
+# Make sure that when you call the role that you override at least the slack_message
+# Example use:
+#     - include_role:
+#     name: slack-msg
+#     vars:
+#       slack_message: "Processing host {{inventory_hostname}}"
+#       slack_channel: "{{ slack_test_channel }}"
+#
+#This should be over written when the role is called
+slack_message: "Hello from {{inventory_hostname}}"
+
+# default slack_icon: "https://www.ansible.com/favicon.ico"
+# This one is a cool wolf face.
+slack_icon: "https://avatars.slack-edge.com/2017-10-31/264795776869_61dc42b2ef1629b47bbc_72.jpg"
+# create this channel first before trying to post to it.
+slack_channel: "#ansible_notification"
+# Good practice to have a test channel for non production test.
+slack_test_channel: "#ansible_notif_test"
+slack_username: "svc_ansible_bot"
+# change this to your token since you won't be able to read this one.
+slack_token: !vault |
+          $ANSIBLE_VAULT;1.1;AES256
+          38663933343465386434393531333736306135333062636135336163313638306639366134626565
+          6462383334306130656339653939653362306135326238370a643865633162396663663466386436
+          33393632633939363331366430306234376437356463653838376430356638633062376537643934
+          6136643265393863660a663765353865363265646364303666336361636438666537333963356161
+          65643065313436613631393864663963313362366531313236346232383139363038303137653630
+          3837363332313931363662333763633431643566666130346166
