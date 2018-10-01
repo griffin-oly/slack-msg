@@ -11,7 +11,7 @@
 #       slack_channel: "{{ slack_test_channel }}"
 #This should be over written when the role is called
 slack_message: "Hello from {{inventory_hostname}}"
-
+#
 # default slack_icon: "https://www.ansible.com/favicon.ico"
 # This one is a cool wolf face.
 slack_icon: "https://avatars.slack-edge.com/2017-10-31/264795776869_61dc42b2ef1629b47bbc_72.jpg"
