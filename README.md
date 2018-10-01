@@ -1,7 +1,7 @@
 Role Name
 =========
 
-Role for sending slack messages. This should be updated to include non inline slack token
+Role for sending slack messages. Updated with non-inline vault encription
 
 Requirements
 ------------
