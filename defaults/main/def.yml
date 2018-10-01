@@ -1,5 +1,6 @@
 ---
 # defaults file for slack-notification
+# Updated to use non-inline
 #
 # Make sure that when you call the role that you override at least the slack_message
 # Example use:
@@ -8,7 +9,6 @@
 #     vars:
 #       slack_message: "Processing host {{inventory_hostname}}"
 #       slack_channel: "{{ slack_test_channel }}"
-#
 #This should be over written when the role is called
 slack_message: "Hello from {{inventory_hostname}}"
 
